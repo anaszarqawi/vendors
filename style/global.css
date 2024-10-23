@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Libre Franklin', sans-serif;
+  margin: 0;
+  padding: 0;
+  /* background-color: #fbfbfb; */
+}
+
+@layer utilities {
+  .embla {
+    overflow: hidden;
+  }
+
+  .embla__container {
+    display: flex;
+  }
+
+  .embla__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+  }
+
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .selected-thumbnail {
+    border: 2px solid theme('colors.primary.500');
+    /* Blue border for selected thumbnail */
+  }
+
+  /* Hover effect for all thumbnails */
+  .thumbnail:hover {
+    border: 2px solid theme('colors.primary.300');
+    /* Light gray border on hover */
+    cursor: pointer;
+  }
+
+  .date-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  .date-input::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+  }
+
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: theme('spacing.1');
+    border-radius: 5px;
+    background-color: theme('colors.zinc.200');
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: theme('colors.primary.500');
+  }
+
+  .slider::-moz-range-track {
+    width: 100%;
+    height: theme('spacing.1');
+    border-radius: 5px;
+    background-color: theme('colors.zinc.200');
+  }
+
+  .slider::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: theme('colors.primary.400');
+  }
+
+  .slider::-moz-range-progress {
+    height: theme('spacing.1');
+    border-radius: 5px;
+    background-color: theme('colors.primary.500');
+  }
+}
